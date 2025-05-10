@@ -1,4 +1,3 @@
-import React from "react";
 import Location from "../../assets/icons/location.svg";
 import Arrow from "../../assets/icons/arrow.svg";
 function Navbar() {
