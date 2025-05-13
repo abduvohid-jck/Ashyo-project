@@ -6,7 +6,7 @@ import MagnifyingGlass from "../../../assets/icons/magnifying-glass.svg";
 import Scale from "../../../assets/icons/scale.svg";
 import Heart from "../../../assets/icons/heart.svg";
 import Cart from "../../../assets/icons/cart.svg";
-import User from "../../../assets/icons/user.svg";
+import { FiUser } from "react-icons/fi";
 
 function MiddleNavbar() {
   return (
@@ -53,7 +53,7 @@ function MiddleNavbar() {
               <img src={Cart} alt="Cart" />
             </div>
             <div className="w-[50px] h-[48px] rounded-[6px] flex justify-center items-center bg-[#EBEFF3]">
-              <img src={User} alt="Profile" />
+              <FiUser className="w-[24px] h-[24px] text-[#545D6A]" />
             </div>
           </div>
         </div>
@@ -63,6 +63,3 @@ function MiddleNavbar() {
 }
 
 export default MiddleNavbar;
-
-// Navbarning middle qismi deyarli tayyor bo'ldi. Faqat shu Profile buttondagi User icon qiyshayib qolgan.
-// O'shaning o'rniga yaxshiroq User icon qo'yib qo'y
