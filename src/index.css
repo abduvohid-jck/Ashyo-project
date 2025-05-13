@@ -10,3 +10,7 @@
   font-family: Inter;
   src: url(./assets/fonts/Inter.woff);
 }
+@font-face {
+  font-family: Robotobold;
+  src: url(./assets/fonts/Roboto-bold.woff);
+}

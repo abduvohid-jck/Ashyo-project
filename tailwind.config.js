@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         Roboto: "Roboto",
         Inter: "Inter",
+        Robotobold: "Robotobold",
       },
     },
     container: {
