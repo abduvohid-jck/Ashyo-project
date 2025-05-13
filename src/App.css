@@ -25,3 +25,9 @@
   width: 1180px !important;
   height: 40px;
 }
+
+@media (max-width: 1439px) {
+  .swiper-pagination {
+    display: none !important;
+  }
+}

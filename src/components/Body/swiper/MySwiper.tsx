@@ -30,7 +30,7 @@ function MySwiper() {
   ];
 
   return (
-    <div className="bg-[#F3F0F0] h-[450px]">
+    <div className="bg-[#F3F0F0] h-[210px] desktop:h-[450px]">
       <div>
         <Swiper
           autoplay={{
@@ -41,7 +41,7 @@ function MySwiper() {
             clickable: true,
           }}
           modules={[Autoplay, Pagination]}
-          className="mySwiper h-[450px]"
+          className="mySwiper h-[210px] desktop:h-[450px]"
           loop={true}
         >
           <div>
@@ -49,21 +49,21 @@ function MySwiper() {
               return (
                 <SwiperSlide>
                   <div className="container">
-                    <div className="flex items-center justify-between w-[1180px] h-[450px]">
+                    <div className="flex items-center justify-between w-[375px] desktop:w-[1180px] h-[210px] desktop:h-[450px] mx-auto">
                       <div>
-                        <p className="font-Robotobold font-[900] text-[44px] text-[#0A1729] leading-[50px]">
+                        <p className="font-Robotobold font-[900] text-[22px] desktop:text-[44px] text-[#203F68] desktop:text-[#0A1729] leading-[25px] desktop:leading-[50px]">
                           {banner.name}
                         </p>
-                        <p className="font-Roboto font-[400] text-[16px] text-[#545D6A] mt-[6px]">
+                        <p className="font-Roboto font-[400] text-[11px] desktop:text-[16px] text-[#203F6899] desktop:text-[#545D6A] mt-[5px] desktop:mt-[6px]">
                           {banner.description}
                         </p>
-                        <button className="w-[161px] h-[54px] flex justify-center items-center font-Roboto font-[400] text-[16px] text-[#FFFFFF] bg-[#0F4A97] rounded-[6px] mt-[22px]">
+                        <button className="w-[111px] desktop:w-[161px] h-[36px] desktop:h-[54px] flex justify-center items-center font-Roboto font-[400] text-[12px] desktop:text-[16px] text-[#FFFFFF] bg-[#0F4A97] rounded-[3px] desktop:rounded-[6px] mt-[17px] desktop:mt-[22px]">
                           Batafsil
                         </button>
                       </div>
                       <div>
                         <img
-                          className="w-[488px]"
+                          className="w-[300px] desktop:w-[488px] pr-[10px]"
                           src={banner.image}
                           alt="Banner image"
                         />
@@ -81,5 +81,3 @@ function MySwiper() {
 }
 
 export default MySwiper;
-
-
