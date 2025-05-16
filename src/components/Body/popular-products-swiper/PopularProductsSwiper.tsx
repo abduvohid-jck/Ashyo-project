@@ -1,8 +1,18 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import Airpods from "../../../assets/photos/airpods.svg";
 import Like from "../../../assets/photos/like.svg";
 import Scale from "../../../assets/photos/scale.svg";
 import Bag from "../../../assets/photos/bag.svg";
+import { Navigation, Autoplay } from "swiper/modules";
+import Samsung from "../../../assets/photos/s25.png";
+import Cannon from "../../../assets/photos/cannon.png";
+import Playstation from "../../../assets/photos/ps5.png";
+import Bose from "../../../assets/photos/bose.png";
+import Dell from "../../../assets/photos/dell.png";
+import Airpodspro from "../../../assets/photos/airpods.png";
+import Logitech from "../../../assets/photos/logitech.png";
+import Ipad from "../../../assets/photos/ipad.png";
+import Macbook from "../../../assets/photos/macbook-p.png";
+import Xiaomi from "../../../assets/photos/xiaomi12.png";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -20,6 +30,20 @@ function PopularProductsSwiper() {
     queryKey: ["products"],
     queryFn: getProducts,
   });
+
+  const images: any = {
+    "/macbookprom2.png": Macbook,
+    "/xiamo12lite.png": Xiaomi,
+    "/s25ultra.png": Samsung,
+    "/canon.png": Cannon,
+    "/ps5.png": Playstation,
+    "/boseque.png": Bose,
+    "/dellxps5.png": Dell,
+    "/airpodspro2.png": Airpodspro,
+    "/logitech.png": Logitech,
+    "/ipad12.png": Ipad,
+  };
+
   return (
     <div className="hidden desktop:block">
       <div className="container">
@@ -28,11 +52,18 @@ function PopularProductsSwiper() {
         </p>
       </div>
       <Swiper
+        loop={true}
         spaceBetween={30}
         slidesPerView={5}
         pagination={{
           clickable: true,
         }}
+        navigation={true}
+        autoplay={{
+          delay: 7000,
+          disableOnInteraction: false,
+        }}
+        modules={[Navigation, Autoplay]}
         className="mySwiper w-[1485px]"
       >
         {data?.data?.items.map((product: any) => {
@@ -46,9 +77,9 @@ function PopularProductsSwiper() {
                     alt="Like"
                   />
                   <img
-                    className=" w-[202.83px] h-[202.57px]"
-                    src={Airpods}
-                    alt="Airpods"
+                    className=" w-[202.83px]"
+                    src={images[product.image]}
+                    alt={product.name}
                   />
                 </div>
                 <div className="mt-[16px]">

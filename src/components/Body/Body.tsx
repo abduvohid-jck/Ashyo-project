@@ -9,7 +9,11 @@ function Body() {
       <MySwiper />
       <Brands />
       <PopularProducts />
-      <PopularProductsSwiper />
+      <div className="flex-col hidden desktop:flex gap-[80px] mb-[120px]">
+        <PopularProductsSwiper />
+        <PopularProductsSwiper />
+        <PopularProductsSwiper />
+      </div>
     </div>
   );
 }
