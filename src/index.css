@@ -14,3 +14,7 @@
   font-family: Robotobold;
   src: url(./assets/fonts/Roboto-bold.woff);
 }
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/fonts/Poppins.woff);
+}
