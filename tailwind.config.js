@@ -8,6 +8,7 @@ export default {
         Inter: "Inter",
         Robotobold: "Robotobold",
         Poppins: "Poppins",
+        Montserrat: "Montserrat",
       },
     },
     container: {

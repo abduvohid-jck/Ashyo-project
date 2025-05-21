@@ -7,6 +7,10 @@
   src: url(./assets/fonts/Roboto.woff);
 }
 @font-face {
+  font-family: Montserrat;
+  src: url(./assets/fonts/Montserrat.woff);
+}
+@font-face {
   font-family: Inter;
   src: url(./assets/fonts/Inter.woff);
 }
