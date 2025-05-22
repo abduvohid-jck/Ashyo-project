@@ -1,6 +1,5 @@
 import Logo1 from "../../../assets/photos/logo-1.svg";
 import Logo2 from "../../../assets/photos/logo-2.svg";
-import BurgerMenu from "../../../assets/icons/burger-menu.svg";
 import Arrow from "../../../assets/icons/arrow-categories.svg";
 import MagnifyingGlass from "../../../assets/icons/magnifying-glass.svg";
 import Scale from "../../../assets/icons/scale.svg";
@@ -47,18 +46,6 @@ function a11yProps(index: number) {
   };
 }
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
-
 function MiddleNavbar() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -67,6 +54,7 @@ function MiddleNavbar() {
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
+    event;
   };
 
   const [email, setEmail] = useState<string>("");
