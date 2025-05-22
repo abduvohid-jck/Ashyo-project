@@ -163,7 +163,7 @@ function Footer() {
           </div>
         </div>
         <p className="font-Roboto font-[400] text-[12px] text-[#00000066] mb-[57px] hidden desktop:block">
-          © 2022 Ashyo ro’hatdan otgan litsenzalangan bu brend.
+          © 2022 Ashyo ro’yhatdan o'tgan litsenziyalangan bu brend.
         </p>
       </div>
     </div>
