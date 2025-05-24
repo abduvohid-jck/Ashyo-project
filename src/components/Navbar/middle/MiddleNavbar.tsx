@@ -89,6 +89,7 @@ function MiddleNavbar() {
       })
       .then((res) => {
         localStorage.setItem("token", res.data.accessToken);
+        localStorage.setItem("verified", res.data.user.is_verified);
         toast.info(res.data.message);
         setOpen(false);
       })
@@ -106,6 +107,7 @@ function MiddleNavbar() {
       })
       .then((res) => {
         localStorage.setItem("token", res.data.accessToken);
+        localStorage.setItem("verified", res.data.user.is_verified);
         toast.info(res.data.message);
         setOpen(false);
       })
@@ -131,9 +133,11 @@ function MiddleNavbar() {
               +998 (71) 123-45-67
             </p>
             {localStorage.getItem("token") ? (
-              <div className="w-[50px] h-[48px] rounded-[6px] flex justify-center desktop:hidden items-center bg-[#EBEFF3]">
-                <FiUser className="w-[24px] h-[24px] text-[#545D6A]" />
-              </div>
+              <Link to="/profile">
+                <div className="w-[50px] h-[48px] rounded-[6px] flex justify-center desktop:hidden items-center bg-[#EBEFF3]">
+                  <FiUser className="w-[24px] h-[24px] text-[#545D6A]" />
+                </div>
+              </Link>
             ) : (
               <Button
                 onClick={handleOpen}
@@ -175,9 +179,11 @@ function MiddleNavbar() {
               <img src={Cart} alt="Cart" />
             </div>
             {localStorage.getItem("token") ? (
-              <div className="w-[50px] h-[48px] rounded-[6px] justify-center hidden desktop:flex items-center bg-[#EBEFF3]">
-                <FiUser className="w-[24px] h-[24px] text-[#545D6A]" />
-              </div>
+              <Link to="/profile">
+                <div className="w-[50px] h-[48px] rounded-[6px] justify-center hidden desktop:flex items-center bg-[#EBEFF3]">
+                  <FiUser className="w-[24px] h-[24px] text-[#545D6A]" />
+                </div>
+              </Link>
             ) : (
               <Button
                 onClick={handleOpen}
